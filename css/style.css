@@ -1,0 +1,149 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.wrapper{
+     border: 1px solid black;
+     height: auto;
+     width: 90%;
+     margin: 0 auto;
+}
+
+.header{
+    border: 1px solid rgb(235, 129, 129);
+    height: 130px;
+    width: 100%;
+    /* background-color: antiquewhite; */
+    background-image: url("../images/banner\ phukien.jpg");
+    background-size: auto;
+}
+/* --------------------------MENU---------------------------------- */
+.menu{
+    border: 1px solid rgb(46, 129, 78);
+    height: 40px;
+    width: 100%;
+    background-color: #84e7a2;
+}
+
+ul.list_menu li {
+    float: left;
+    margin: 5px;
+    border: 1px solid black;
+    padding: 3px;
+}
+
+ul.list_menu li:hover{
+    background-color: #e0759e;
+}
+
+ul.list_menu li a{
+    text-decoration: none;
+    text-align: center;
+    color:black;
+}
+
+ul.list_menu {
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
+    width: 70%;
+    list-style: none;
+}
+
+/* ------------------------------------------------------------------ */
+.main{
+    border: 1px solid rgb(46, 113, 214);
+    height: auto;
+    width: 100%;
+}
+
+.side_bar{
+    /* border: 1px solid rgb(233, 132, 132); */
+    height: 390px;
+    width: 20%;
+    margin-top: 5px;
+    margin-left: 5px;
+    float: left;
+}
+
+ul.list_side_bar li {
+    margin: 7px;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+ul.list_side_bar li:hover{
+    background-color: #84e67b;
+}
+
+ul.list_side_bar li a{
+    text-decoration: none;
+    text-align: left;
+    color:black;
+    display: block;
+}
+
+ul.list_side_bar {
+    margin: 0;
+    padding: 0;
+    padding-top: 5px;
+    margin: 0 auto;
+    width: 70%;
+    list-style: none;
+}
+
+
+.main_content{
+    border: 1px solid rgb(253, 8, 8);
+    height: auto;
+    width: 78%;
+    margin-top: 5px;
+    margin-left: 5px;
+    float: right;
+}
+
+ul.list_product li img {
+    width: 100%;
+}
+
+ul.list_product li {
+    width: 20%;
+    border: 1px dashed black;
+    margin: 10px;
+    padding: 5px;
+    float: left;
+    background-color: #caa5a5;
+}
+ul.list_product {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+}
+
+p.price_product {
+    text-align: center;
+}
+
+p.title_product {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+}
+
+.clear{
+    clear:both;
+}
+.footer{
+    border: 1px solid rgb(212, 84, 144);
+    height: 150px;
+    width: 100%;
+    background-color: #e0759e;
+}
+

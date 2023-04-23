@@ -1,0 +1,49 @@
+
+
+/* ------------------------WRAPPER---------------------------- */
+.wrapper {
+    BORDER: 1px solid black;
+    height: auto;
+    width: 100%;
+    /* background-color: rgb(209, 238, 228); */
+}
+
+
+/* ------------------------TITLE---------------------------- */
+h3.title.admin {
+    text-align: center;
+    color: mediumblue;
+    font-size: xx-large;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: antiquewhite;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+/* ------------------------MENU---------------------------- */
+ul li a {
+    text-decoration: none;
+    color: black;
+}
+ul li {
+    margin: 5px;
+    padding: 7px;
+    float: left;
+    /* text-decoration: none; */
+    list-style: none;
+    color: black;
+    border: 1px solid;
+}
+
+ul li:hover {
+    background-color: rgb(146, 236, 143);
+    border: 3px solid black;
+}
+.clear{
+    clear: both;
+}
+
+/* ------------------------MAIN---------------------------- */
+/* ------------------------FOOTER-------------------------- */
