@@ -1,6 +1,6 @@
 <?php
-  $sql_lietke_danhmucsp = "SELECT * FROM tbl_danhmuc ORDER BY thutu DESC";
-  $query_lietke_danhmucsp = mysqli_query($mysqli,$sql_lietke_danhmucsp);
+  $sql_lietke_sanpham = "SELECT * FROM tbl_sanpham ORDER BY id_sanpham DESC";
+  $query_lietke_sanpham = mysqli_query($mysqli,$sql_lietke_sanpham);
 ?>
 
 <!DOCTYPE html>
@@ -46,6 +46,7 @@
             padding: 0 5px;
             background-color: red;
             border-radius: 5px;
+            float: left;
         }
          a.edit {
             text-decoration: none;
@@ -68,23 +69,43 @@
                 <tr>
                     <th>Số thứ tự</th>
                     <th>Tên sản phẩm</th>
+                    <th>Mã sản phẩm</th>
+                    <th>Giá Sản phẩm</th>
                     <th>Số lượng</th>
+                    <th>Tóm tắt</th>
+                    <th>Nội dung</th>
+                    <th>Hình ảnh</th>
+                    <th>Tình trạng</th>
                     <th>Quản lý</th>
                 </tr>
             </thead>
             <?php
                 $i = 0;
-                while($row = mysqli_fetch_array($query_lietke_danhmucsp)){    // mysqli_fetch_array dung để lấy giữ liệu trong database
+                while($row = mysqli_fetch_array($query_lietke_sanpham)){    // mysqli_fetch_array dung để lấy giữ liệu trong database
                     $i++;
             ?>
             <tbody>
                 <tr>
                     <td> <?php echo $i?> </td>
-                    <td> <?php echo $row['tendanhmuc']?></td>
-                    <td> <?php echo $row['thutu']?></td>
+                    <td> <?php echo $row['tensanpham']?></td>
+                    <td> <?php echo $row['masp']?></td>
+                    <td> <?php echo $row['giasp']?></td>
+                    <td> <?php echo $row['soluong']?></td>
+                    <td> <?php echo $row['tomtat']?></td>
+                    <td> <?php echo $row['noidung']?></td>
+                    <td> <?php echo $row['hinhanh']?></td>
+                    <td> 
+                        <?php
+                        if($row['trangthai'] == 1){
+                            echo 'Hiện';
+                        } else {
+                            echo 'Ẩn';
+                        }
+                         ?>
+                    </td>
                     <td >
-                        <a class="delete" href="module/quanlysanpham/xuly.php?id=<?php echo $row['id_danhmuc']?>">Xóa</a> | 
-                        <a class="edit" href="index_admin.php?action=quanlydanhmucsanpham&query=sua&id=<?php echo $row['id_danhmuc']?>">Sửa</a>                        
+                        <a class="delete" href="module/quanlysanpham/xuly.php?id=<?php echo $row['id_sanpham']?>">Xóa</a> 
+                        <a class="edit" href="index_admin.php?action=quanlydanhmucsanpham&query=sua&id=<?php echo $row['id_sanpham']?>">Sửa</a>                        
                     </td>                                                                       
 
                 </tr>
