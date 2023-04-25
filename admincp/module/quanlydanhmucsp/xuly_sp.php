@@ -21,5 +21,17 @@
         move_uploaded_file($hinhanhsp_tmp,'uploads/'.$hinhanhsp);
         header('Location: ../../index_admin.php?action=quanlysanpham&query=them');
     }
+    else {
+        // Trong phần xuly_sp này xóa sp xong cần phải xóa thêm hình ảnh nữa nên ta phải thêm bước này 
+        $idsanpham = $_GET['id'];
+        $sql = "SELECT * FROM tbl_sanpham WHERE id_sanpham = '".$idsanpham."' LIMIT 1";
+        $query  = mysqli_query($mysqli, $sql);
+        while ($row = mysqli_fetch_array($query)){
+            unlink('uploads/'.$row['hinhanh']);
+        }
+        $sql_xoa = "DELETE FROM tbl_sanpham WHERE id_sanpham = '".$idsanpham."'";
+        mysqli_query($mysqli, $sql_xoa);
+        header('Location:../../index_admin.php?action=quanlysanpham&query=them');
+    }
 ?>
 

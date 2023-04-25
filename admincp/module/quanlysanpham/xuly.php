@@ -17,6 +17,6 @@ if(isset($_POST['themdm'])){
     $id = $_GET['id'];
     $sql_xoa = "DELETE FROM tbl_danhmuc WHERE id_danhmuc='".$id."'";
     mysqli_query($mysqli, $sql_xoa);
-    header('Location:../../index_admin.php?action=quanlydanhmucsanpham');
+    header('Location:../../index_admin.php?action=quanlydanhmucsanpham&query=them');
 }
 ?>

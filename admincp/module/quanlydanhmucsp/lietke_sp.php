@@ -93,7 +93,7 @@
                     <td> <?php echo $row['soluong']?></td>
                     <td> <?php echo $row['tomtat']?></td>
                     <td> <?php echo $row['noidung']?></td>
-                    <td> <?php echo $row['hinhanh']?></td>
+                    <td><img src="./module/quanlydanhmucsp/uploads/?php echo $row['hinhanh']?>" alt="Ảnh sản phẩm"></td>
                     <td> 
                         <?php
                         if($row['trangthai'] == 1){
@@ -104,8 +104,8 @@
                          ?>
                     </td>
                     <td >
-                        <a class="delete" href="module/quanlysanpham/xuly.php?id=<?php echo $row['id_sanpham']?>">Xóa</a> 
-                        <a class="edit" href="index_admin.php?action=quanlydanhmucsanpham&query=sua&id=<?php echo $row['id_sanpham']?>">Sửa</a>                        
+                        <a class="delete" href="module/quanlydanhmucsp/xuly_sp.php?id=<?php echo $row['id_sanpham']?>">Xóa</a> 
+                        <a class="edit" href="index_admin.php?action=quanlysanpham&query=sua&id=<?php echo $row['id_sanpham']?>">Sửa</a>                        
                     </td>                                                                       
 
                 </tr>

@@ -16,8 +16,9 @@
     }elseif($var == 'quanlysanpham' && $query == 'them'){
         include("module/quanlydanhmucsp/them_sp.php");
         include("module/quanlydanhmucsp/lietke_sp.php");
-    }
-    else{
+    }elseif($var == 'quanlysanpham' && $query == 'sua'){
+        include("module/quanlydanhmucsp/sua.php");
+    }else{
         include("dashboard.php");
     }
 
